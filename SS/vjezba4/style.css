@@ -1,0 +1,370 @@
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: whitesmoke;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: lightgray;
+}
+
+:root {
+    --bg-clr: #1c1c1c;
+    --font-clr: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    background-color: var(--bg-clr);
+    color: var(--font-clr);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header > h1 > span {
+    opacity: 0;
+    transform: scale(.9);
+    transition: .2s all ease-in-out;
+}
+
+.header-line {
+    position: absolute;
+    inset: calc(100% - 3) 100% 0px 0px;
+    background-color: rgba(255, 255, 255, .3);
+    transition: .4s all ease-in-out;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+}
+
+section > div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    z-index: 2;
+    cursor: pointer;
+    background-color: transparent;
+    transition: .5s all ease;
+    padding: 25px 30px;
+    border: 1px solid var(--font-clr);
+    position: relative;
+    overflow: hidden;
+}
+
+section h2::before {
+    content: "";
+    position: absolute;
+    background-color: var(--font-clr);
+    transition: inherit;
+}
+
+.igra::before {
+    inset: 0 100% 0 0;
+}
+
+.sport::before
+{
+    inset: 0 0 0 100%;
+}
+
+section h2:hover {
+    border-color: rgba(255, 255, 255, .3);
+}
+
+section h2:hover::before {
+    inset: 0;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.igra:hover::before {
+    transform: skewX(45deg);
+}
+
+.sport:hover::before {
+    transform: skewX(-45deg);
+}
+
+.igra-progress, .sport-form {
+    position: fixed;
+    z-index: 2000;
+    inset: 30px;
+    background-color: var(--bg-clr);
+    border: 1px solid var(--font-clr);
+    display: none;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    transition: .2s all ease-in-out;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.options {
+    background-color: transparent;
+}
+
+.options > div {
+    background-color: inherit !important;
+}
+
+.options h1 {
+    margin: 30px 0;
+    text-align: center;
+    background-color: inherit !important;
+}
+
+.options span {
+    border: 1px solid var(--font-clr);
+    padding: 15px;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.options span:active {
+    color: var(--bg-clr);
+    background-color: var(--font-clr);
+    font-weight: bold;
+}
+
+.igra-progress > span {
+    padding: 15px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.close-igra, .close-sport {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.close-igra path, .close-sport path {
+    transition: .3s all ease;
+}
+
+.close-igra:hover path, .close-sport:hover path {
+    color: red;    
+}
+
+.sport-input > h1, .igraca-input > h1 {
+    padding-bottom: 15px;
+}
+
+.smece > h2 {
+    padding-bottom: 15px;
+}
+
+.sport-input > input, .igraca-input > input, .smece > input {
+    width: 90px;
+    border: 1px solid var(--font-clr);
+    padding: 5px 10px;
+    transition: .3s all ease;
+    height: 27px;
+}
+
+.sport-input > input:focus, .igraca-input > input:focus, .smece > input:focus {
+    border-color: rgb(111, 111, 111);
+    outline: 0;
+}
+
+.upisi {
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+    border-top: 7px solid var(--font-clr);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: 1px solid var(--font-clr);
+    border-left: 1px solid var(--font-clr);
+    border-right: 1px solid var(--font-clr);
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    height: 40px;
+}
+
+.upisi:active {
+    padding-top: 1px;
+    border-top-width: 3px;
+}
+
+nav {
+    position: fixed;
+    z-index: 1998;
+    inset: 0 0 0 100%;
+    background-color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    transition: .4s all ease;
+    padding-top: 84px;
+}
+
+a {
+    text-decoration: none;
+    background-color: inherit;
+    padding: 30px;
+    font-weight: bold;
+    transition: .4s all ease;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: var(--bg-clr); 
+}
+
+.hamburger {
+    position: fixed;
+    background-color: #2c2c2c;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    z-index: 1999;
+    transition: .3s all ease-in-out;
+}
+
+.hamburger::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg-clr);
+    transition: inherit;
+    border-radius: 50%;
+    z-index: -2;
+}
+
+.hamburger:hover::before {
+    inset: 0 6px 0 -6px ;
+}
+
+.hamburger:hover > div {
+    left: 9px;
+}
+
+.hamburger > div {
+    position: absolute;
+    width: 30px;
+    height: 2.5px;
+    background-color: var(--font-clr);   
+    left: 15px;
+    transition: inherit;
+}
+
+.hamburger > div:first-of-type {
+    top: 20px;
+}
+
+.hamburger > div:nth-of-type(2) {
+    top: 30px;
+}
+
+.hamburger > div:last-of-type {
+    top: 40px;
+}
+
+.first-nav-animation {
+    top: 30px !important;
+    transform: rotate(-135deg);
+}
+
+.second-nav-animation {
+    top: 30px !important;
+    transform: rotate(135deg);
+}
+
+.third-nav-animation {
+    left: -30px !important;
+    opacity: 0;
+}
+
+.time-show {
+    position: fixed;
+    top: calc(100% - 52px);
+    left: calc(100% - 112px);
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 80px;
+    background-color: #2c2c2c;
+    cursor: grab;
+    transition: .3s box-shadow ease;
+    box-shadow: 0px 0px 0px 5px #1c1c1c,
+    0px 0px 0px 10px transparent;
+    z-index: 1800;
+}
+
+.time-show:active {
+    cursor: grabbing;
+    box-shadow: 0px 0px 0px 2px #1c1c1c,
+    0px 0px 0px 4px var(--font-clr);
+}
+
+.date {
+    height: 50%;
+    background-color: inherit;   
+}
+
+.time {
+    height: 50%;
+    background-color: inherit;
+    position: relative;
+}
+
+.time::before {
+    position: absolute;
+    content: "";
+    inset: calc(100% - 1px) 30px -1px 30px;
+    background-image: linear-gradient(90deg, #2c2c2c, var(--font-clr), #2c2c2c);
+    transition: .3s all ease-in-out;
+}
+
+.time-show:hover .time::before {
+    inset: calc(100% - 1px) 20px -1px 20px;
+}
+
+.date, .time {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

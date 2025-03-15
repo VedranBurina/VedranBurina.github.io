@@ -1,0 +1,87 @@
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Consolas';
+    color: white;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; 
+}
+
+h1 {
+    text-align: center;
+}
+
+body > div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 3vmin;
+}
+
+nav {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, .3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, .3);
+    border-radius: 5px;
+}
+
+nav > div {
+    margin: 10px 10px;
+}
+
+.helper {
+    height: 44px;
+}
+
+.button {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    border-bottom: 8px solid #1f1f1f;
+    padding: 10px 30px;
+    transition: .3s all ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:active {
+    border-bottom: 4px solid #1f1f1f;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+}
+
+.table div {
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 150px;
+    height: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > svg {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}

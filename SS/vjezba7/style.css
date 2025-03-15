@@ -1,0 +1,412 @@
+img[alt="www.000webhost.com"]{ display: none; }
+
+:root {
+    --font-clr: #e3e3e3;
+    --background-clr: #1c1c1c;
+    --transition: .55s all ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* INDEX */
+ 
+/* */
+
+/* */
+
+header {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--background-clr);
+    color: var(--font-clr);
+    position: relative;
+    transition: var(--transition);
+    border-bottom-width: 2px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+}
+
+header > h2 {
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+header > h1 {
+    font-size: 36px;
+    opacity: 0;
+    margin-top: 25px;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.header-background {
+    position: absolute;
+    inset: 0 100% 0 0;
+    background-color: var(--font-clr);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--background-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img {
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: .7s all ease-in-out;
+    padding: 5px;
+    width: 300px;
+    position: relative;
+}
+
+section td {
+    transition: .7s all ease-in-out;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* section td::before {
+    transition: .7s all ease-in-out;
+    position: absolute;
+    inset: 0 0 100% 0;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+}
+
+section td:hover::before {
+    inset: 0 0 0 0;
+} */
+
+section td > h1 {
+    position:  absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: black;
+    padding: 5px 15px;
+    color: var(--font-clr);
+    opacity: 0;
+    transition: var(--transition);
+    cursor: pointer;
+    border-radius: 2.5px;
+}
+
+nav {
+    background-color: black;
+    z-index: 1000;
+    position: fixed;
+    inset: 50% calc(100% - 70px) calc(50% - 65px) 5px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+nav > .hamburger {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: inherit;
+}
+
+nav > .hamburger > div {
+    width: 30px;
+    height: 2.5px;
+    background: var(--font-clr);
+    position: absolute;
+    left: 17.5px;
+    transition: inherit;
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    top: 0;
+    left: 0;
+    background-color: var(--background-clr);
+    border-radius: 50%;
+    transition: inherit;
+}
+
+nav:hover > .hamburger, nav:hover::before {
+    left: 10px;
+}
+
+nav > .hamburger > div:first-of-type {
+    top: 19px;
+}
+
+nav > .hamburger > div:nth-of-type(2) {
+    top: 30px;
+}
+
+nav > .hamburger > div:last-of-type {
+    top: 41px;
+}
+
+.hamburger-animation-1 {
+    top: 30px !important;
+    transform: rotate(-135deg);
+}
+
+.hamburger-animation-2 {
+    top: 30px !important;
+    transform: rotate(135deg);
+}
+
+.nav-content {
+    background-color: black;
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: calc(100% + 50px);
+    width: fit-content;
+    box-shadow: 0px 0px 10px var(--background-clr) inset,
+    0px 0px 10px 20px var(--background-clr);
+    color: var(--font-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.nav-content > span {
+    cursor: pointer;
+    font-size: 16px;
+    transition: inherit;
+    padding: 10px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.nav-content > span:hover {
+    background-color: var(--background-clr);
+    box-shadow: 0px 0px 10px var(--background-clr);
+}
+
+svg {
+    z-index: 1000;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: var(--font-clr);
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+svg:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.cookie-login, .cookie-login2 {
+    z-index: 2000;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: var(--background-clr);
+    padding: 30px;
+    border: 1px solid black;
+}
+
+/* PROCESORI */
+ 
+/* */
+
+/* */
+
+article {
+    background-color: var(--background-clr);
+    color: var(--font-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 40px 0;
+}
+
+article > div > h1 {
+    font-size: 20px;
+}
+
+article > div {
+    font-size: 16px;
+    padding: 15px 40px;
+}
+
+input {
+    background-color: var(--background-clr);
+    font-size: 16px;
+    color: var(--font-clr);
+    padding: 5px 25px;
+    border: 1px solid white;
+    transition: var(--transition);
+    margin-bottom: 5px;
+}
+
+input::placeholder {
+    color:rgba(255, 255, 255, .5)
+}
+
+input:focus {
+    outline: 0;
+}
+
+input[type="button"] {
+    cursor: pointer;
+}
+
+input[type="button"]:hover, input[type="number"]:focus, input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, .3);
+    border-color: transparent;
+}
+
+.ispis > div {
+    padding: 15px 0;
+}
+
+.ispis > div > span {
+    padding: 5px 30px;
+}
+
+.ispis3 {
+    cursor: pointer;
+}
+
+.ispis3:hover {
+    background-color: rgb(255, 105, 105);
+}
+
+/* MEMORIJE */
+ 
+/* */
+
+/* */
+
+.ddr {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--background-clr);
+    color: var(--font-clr);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.ddr > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ddr > div:first-child > h2 {
+    padding: 5px 20px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.ddr > div:first-child > h2:hover {
+    border-color: var(--font-clr);
+    background-color: #2c2c2c;
+}
+
+.ddr-text {
+    font-size: 16px;
+    padding: 15px 50px;
+}
+
+/* DISKOVI */
+ 
+/* */
+
+/* */
+
+.ddr-text > img {
+    width: 360px;
+    padding: 5px;
+}
+
+.zoom {
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid var(--font-clr);
+    padding: 5px 15px;
+}
+
+.zoom:hover {
+    background-color: rgba(255, 255, 255, .3);
+    border: 1px solid transparent;
+}
+
+img {
+    transition: var(--transition);
+}
+
+textarea {
+    background-color: var(--background-clr);
+    color: var(--font-clr);
+    font-size: 18px;
+    border: 0;
+}
+
+textarea:focus {
+    border: 0;
+    outline: 0;
+}
+
+textarea::placeholder {
+    color: var(--font-clr);
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+

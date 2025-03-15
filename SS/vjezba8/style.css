@@ -1,0 +1,101 @@
+img[alt="www.000webhost.com"]{ display: none; }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Consolas;
+    background-color: var(--bg-clr);
+    color: var(--em-clr);
+}
+
+:root {
+    --trans: .45s all ease-in-out;
+    --em-clr: #e3e3e3;
+    --bg-clr: #1c1c1c;
+}
+
+header, section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    transition: var(--trans);
+    border-bottom: 1px transparent solid;
+}
+
+section {
+    row-gap: 25px !important;
+    padding: 30px 0;
+}
+
+header > h3 {
+    padding-left: 50px;
+}
+
+header > h1 > span {
+    transition: .3s all ease-in-out;
+    opacity: 0;
+}
+
+.btn {
+    font-size: 18px;
+    font-weight: bold;
+    transition: var(--trans);
+    border: 1px solid white;
+    position: relative;
+    cursor: pointer;
+    padding: 15px 45px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 100% 10% -100% -10%;
+    background-color: rgba(255, 255, 255, .0);
+    transform: skewX(-45deg);
+    transition: var(--trans);
+}
+
+.btn:hover {
+    border-color: transparent;
+}
+
+.btn:hover::before {
+    inset: 0;
+    transform: skewX(0deg);
+    background-color: rgba(255, 255, 255, .3);
+}
+
+input {
+    border: 1px solid rgba(255, 255, 255, .2);
+    padding: 12.5px 32.5px;
+    transition: var(--trans);
+    opacity: 0;
+}
+
+input:focus {
+    outline: 0;
+    border-radius: 0;
+    border: 1px var(--em-clr) solid;
+}
+
+svg {
+    z-index: 1000;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: var(--font-clr);
+    cursor: pointer;
+    transition: var(--trans);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+svg:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+

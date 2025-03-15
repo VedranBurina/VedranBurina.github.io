@@ -1,0 +1,187 @@
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+
+:root {
+    --font-clr: whitesmoke;
+    --em-bg: #1c1c1c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Monospace;
+    color: var(--font-clr);
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--em-bg);
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--em-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.write-out {
+    display: none;
+}
+
+.line {
+    background: linear-gradient(90deg, var(--em-bg) 5%, var(--font-clr), var(--em-bg) 95%);
+    height: 2px;
+    width: 0;
+    transition: .7s all ease;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--em-bg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    padding: 25px;
+    border: 1px solid var(--font-clr);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    transition: .5s all ease;
+}
+
+.button:hover {
+    border-color: rgba(245, 245, 245, .3);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0 calc(100% - 10px) calc(100% - 10px) 0;
+    background-color: var(--font-clr);
+    transition: inherit;
+}
+
+.button:hover::before {
+    inset: 0 0 0 0;
+    background-color: rgba(245, 245, 245, .3);
+}
+
+.form {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    width: 340px;
+    height: 560px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(28, 28, 28, .95);
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    align-items: center;
+    border: 1px solid var(--font-clr);
+}
+
+.form-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.form-close > path {
+    transition: .4s all ease-in-out;
+    color: var(--font-clr);
+}
+
+.form-close:hover > path {
+    color: #ee1232 !important;
+    transform: rotate(360deg);
+}
+
+.form > h3 {
+    padding-top: 20px; 
+    color: var(--font-clr);
+}
+
+.form > input {
+    font-size: 16px;
+    padding: 18px;
+    border: 0;
+    outline: 0;
+    color: var(--font-clr);
+    transition: .3s all ease;
+    background-color: #2f2f2f;
+    height: 54.4px;
+}
+
+.form > input:focus {
+    border: 0;
+    outline: 0;
+    background-color: #3a3a3a;
+}
+
+.button-potvrdi {
+    border-bottom: 9px solid var(--font-clr);
+    border-top: 1px solid var(--font-clr);
+    border-left: 1px solid var(--font-clr);
+    border-right: 1px solid var(--font-clr);
+    padding: 20px;
+    height: 64px;
+    transition: .2s all ease;
+}
+
+.button-potvrdi:active {
+    border-bottom-width: 3px;
+}
+
+nav {
+    position: fixed;
+    z-index: 1999;
+    left: 20px;
+    bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+nav > svg {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    padding: 5px;
+    transition: .35s all ease-in-out;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 0px 14px var(--em-bg),
+    0px 0px 0px 17px transparent;
+}
+
+nav > svg > path {
+    transition: inherit;
+}
+
+nav > svg:hover > path {
+    color: var(--em-bg);
+}
+
+nav > svg:hover {
+    background-color: var(--font-clr);
+    box-shadow: 0px 0px 0px 5px var(--em-bg),
+    0px 0px 0px 8px var(--font-clr);
+}
+
+

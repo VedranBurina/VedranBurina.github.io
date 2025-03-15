@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vjezba 6 &bullet; Procesori</title>
+</head>
+<body>
+    <svg onclick="window.location.href = '../'" width="39" height="39" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75024 19.2502H17.2502C18.3548 19.2502 19.2502 18.3548 19.2502 17.2502V9.75025L12.0002 4.75024L4.75024 9.75025V17.2502C4.75024 18.3548 5.64568 19.2502 6.75024 19.2502Z"></path>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.74963 15.7493C9.74963 14.6447 10.6451 13.7493 11.7496 13.7493H12.2496C13.3542 13.7493 14.2496 14.6447 14.2496 15.7493V19.2493H9.74963V15.7493Z"></path>
+    </svg>
+    <header>
+        <div class="header-background"></div>
+        <h2>VEDRAN BURINA</h2>
+        <h1>Procesori</h1>
+    </header>
+    <nav>
+        <div class="hamburger"><div></div><div></div><div></div></div>
+        <div class="nav-content">
+            <span onclick="window.location.href='index.html';">Početna</span>
+            <span onclick="window.location.href='procesori.html';">Procesor</span>
+            <span onclick="window.localation.href='memorije.html'">Memorija</span>
+            <span onclick="window.location.href='diskovi.html';">Diskovi</span>
+        </div>
+    </nav>
+    <article>
+        <div>
+            <h1>Procesor</h1><br>
+            Procesor, poznat i kao Centralna Procesorska Jedinica ili skraćeno CPU (engl. Central Processing Unit), predstavlja srce svakog računala. Ovo ključno računalno komponenta izvršava osnovne računalne zadatke, obrađujući podatke i izvršavajući instrukcije koje mu šalju druge dijelove računala.
+        </div>
+        <div>
+            <h1>Uloga procesora</h1><br>
+            Jedna od ključnih karakteristika procesora je brzina izvršavanja instrukcija, izražena u gigahercima (GHz). Veća brzina procesora obično rezultira bržim izvršavanjem računalnih zadataka. Međutim, važno je napomenuti da brzina nije jedini faktor koji određuje performanse procesora.
+        </div>
+        <div>
+            <h1>Višejezgrenost</h1><br>
+            Procesori mogu imati različit broj jezgri (multicore) što omogućuje istovremeno izvršavanje više zadataka. Više jezgri često vodi boljoj multitasking sposobnosti računala, što znači da može istovremeno rukovati s više aplikacija bez gubitka performansi.
+        </div>
+        <div>
+            <h1>Napredak procesora</h1><br>
+            Tehnološki napredak u području procesora često uključuje smanjenje veličine čipa i prijelaz na nove arhitekture. Takav napredak omogućuje bolje performanse uz manju potrošnju energije. Procesori su također opremljeni keš memorijom, bržom vrstom memorije koja služi za pohranu često korištenih podataka kako bi se ubrzao pristup njima.
+        </div>
+        <div>
+            <h1>Vrste procesora</h1><br>
+            Različite vrste procesora prilagođene su različitim namjenama, uključujući procesore za osobna računala, poslužitelje, mobilne uređaje i ugrađene sustave. Napredak u području procesorske tehnologije ključan je za općenitu evoluciju računala i njihovu sposobnost obrade sve složenijih zadataka.
+        </div>
+    </article>
+    <article>
+        <div class="form">
+            <input type="number" maxlength="4" id="godina" placeholder="Upiši god. procesora"><br>
+            <input type="text" id="naziv" placeholder="Upiši naziv procesora"><br>
+            <input type="button" value="OK" id="ok"><br>
+        </div>
+        <div class="ispis">
+        </div>
+    </article>
+
+    <script src="procesori.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

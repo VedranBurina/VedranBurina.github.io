@@ -1,0 +1,219 @@
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+
+* {
+    font-family: 'Consolas';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: 'Inconsolata', monospace;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(186, 186, 255);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(255, 186, 186);
+}
+
+::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+  
+
+:root {
+    --defualt-font-clr: rgb(146, 146, 146);
+    --transition: .4s all ease;
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 22px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: whitesmoke;
+    color: var(--defualt-font-clr);
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    transition: var(--transition);
+}
+
+.header-onscroll {
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0px 0px 18px lightgray;
+}
+
+header > h1 > span:first-of-type {
+    color: rgb(255, 186, 186);
+}
+
+header > h1 > span:last-of-type {
+    color: rgb(186, 186, 255);
+}
+
+@media(max-width: 480px) {
+    header {
+        padding: 30px 30px;
+    }
+}
+
+header > svg {
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 50%;
+    border: 2px solid rgb(186, 186, 255);
+    position: relative;
+    box-sizing: border-box;
+    color: rgb(186, 186, 255);
+}
+
+header > svg:hover {
+    background-color: rgb(186, 186, 255);
+    color: whitesmoke;
+}
+
+.calculations {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--defualt-font-clr);
+    padding: 40px 15px;
+}
+
+.calculations > h2 {
+    width: 100%;
+    margin: 14px;
+}
+
+.calculations > div {
+    position: relative;
+    margin: 14px;
+    background-color: rgb(255, 243, 243);
+    padding: 15px 40px;
+}
+
+.calc-back {
+    position: absolute;
+    inset: 7px -7px -7px 7px;
+    background-color: rgb(227, 227, 255);
+    z-index: -1;
+}
+
+.line1 {
+    display: flex;
+    height: 7px;
+    width: 100vw;
+}
+
+.line2 {
+    display: flex;
+    height: 7px;
+    width: 100vw;
+    flex-direction: row-reverse;
+}
+
+.line-element-1, .line-element-2 {
+    width: 10%;
+    height: 100%;
+}
+
+.line-element-1 {
+    background-color: rgb(255, 186, 186);
+}
+
+.line-element-2 {
+    background-color: rgb(186, 186, 255);
+}
+
+.wide-boi {
+    width: 320px;
+}
+
+.wide-boi > p {
+    line-height: 28px;
+}
+
+.wide-boi > .calc-back {
+    inset: 7px 7px -7px -7px;
+}
+
+.shadow-to-the-left {
+    padding-bottom: 280px !important;
+}
+
+.shadow-to-the-left .calc-back {
+    inset: 7px 7px -7px -7px;
+}
+
+.shadow-to-the-left input[type="number"] {
+    width: auto;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    color: var(--defualt-font-clr);
+    font-size: inherit;
+}
+
+.shadow-to-the-left input[type="number"] {
+    outline: 0;
+    border: 0;
+}
+
+.current-operation {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px 40px;
+}
+
+.dropdown-div {
+    cursor: pointer;
+}
+
+.dropdown {
+    font-size: 22px;
+    font-weight: bold;
+    width: 93px;
+    transition: .4s inset ease;
+    overflow: hidden;
+}
+
+.dropdown-open {
+    inset: 59px 7px -260px -7px !important;
+}
+
+.dropdown > div {
+    width: 93px;
+    height: 52px;
+    padding: 15px 40px;
+    transition: var(--transition);
+}
+
+.dropdown > div:hover {
+    background-color: rgb(255, 243, 243);
+}
+
+
+
+
